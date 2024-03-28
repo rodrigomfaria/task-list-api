@@ -24,5 +24,6 @@ module.exports = {
     "class-methods-use-this": "off",
     "no-underscore-dangle": "off",
     "arrow-body-style": "off",
+    "import/no-extraneous-dependencies": "off",
   },
 };
