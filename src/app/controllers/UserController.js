@@ -1,4 +1,4 @@
-import Yup from "yup";
+import * as Yup from "yup";
 import User from "../models/User";
 
 class UserController {
@@ -37,6 +37,7 @@ class UserController {
       oldPassword: Yup.string().min(6),
       password: Yup.string()
         .min(6)
+        // eslint-disable-next-line no-shadow
         .when("oldPassword", (oldPassword, field) =>
           oldPassword ? field.required() : field
         ),
